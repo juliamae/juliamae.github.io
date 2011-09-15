@@ -5,100 +5,142 @@
 		<title>
 			juliawe.st
 		</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
     
 		<style type="text/css" media="screen">
 			* {
-				font-family: Helvetica, sans-serif;
-				text-align: center;
+				font-family : Helvetica, sans-serif;
+				text-align  : center;
+				text-shadow : 3px 3px #ccc;
+				
 			}
+			
+			html, body {
+  			height  : 100%;
+  			margin  : 0;
+  			padding : 0;
+  		}
 
 			h1 {
-				font-size: 48px;
-				margin-top: 20px;
+				font-size   : 48px;
+				padding-top : 20px;
 			}
 			
 			ul, li {
-			  display: block;
+			  display : block;
 			}
 			
-			dd ul {
-			  clear: both;
-        margin: 0 auto;
-        padding-left: 50px;
-			  width: 900px;
+			li.the-light {
+			  margin         : 10px auto 0;
+			  font-size      : 30px;
+			  text-align     : center;
+			  padding-bottom : 30px;
+			  text-shadow   : none;
 			}
 			
-			li {
-			  float: left;
-			  margin: 0 50px 20px 0;
+			a {
+			  text-decoration : none;
+			  text-shadow : 3px 3px #000;
 			}
 			
-			.other li {
-			  margin: 0 10px 20px 0;
+			a:hover {
+			  text-decoration : underline;
 			}
       
-			a img {
-				border: 0;
-			}
-			
-			li.the_light {
-			  margin: 10px auto 0;
-			  float: none;
-			  font-size: 30px;
-			  text-align: center;
-			  padding-bottom: 30px;
-			}
-			
-			.hidden {
-			  display: none;
-			}
+  		img#bg {
+  			position : fixed;
+  			top      : 0;
+  			left     : 0;
+  			width    : 100%;
+  			height   : 100%;
+  		}
+
+  		#content {
+  			position : relative;
+  			z-index  : 1;
+  		}
+  		
+  		#preview {
+  		  width: 205px;
+  		  margin: 0 auto;
+  		  position: relative;
+  		  text-align: center;
+  		}
+  		
+  		#preview img {
+  		  display: none;
+  		}
+
 		</style>
+  	
+  	<script type="text/javascript" charset="utf-8">
+  	  $(function(){
+  	    $(".the-light a").hover(function(){
+  	      $("#preview img#" + $(this).data("preview")).show();
+  	    }, function(){
+  	      $("#preview img").hide()
+  	    });
+  	  });
+  	</script>
 	</head>
 	<body>
-		<h1>
-			julia mae west<br>
-			is a web developer who lives in new york city
-		</h1>
-		<ul>
-		  <li class="the_light">&#x273E; &#x274D; &#x2741; &#x221E; &#x2743; &#x270C; &#x2638;</li>
-		</ul>
-		<dl>
-		  <dt class="hidden">She makes</dt>
-  		<dd>
-			  <ul>
-			    <li>
-			      <a href="http://inlu.st"><img src="images/inlust.png" title="Inlust: Next-level online dating in new york city" alt="Inlust"></a>
-			    </li>
-  				<li>
-  					<a href="http://istherecaffeineinit.com"><img src="images/istherecaffeineinit.png" title="IsThereCaffeineInIt: A joint project with photographer Kris Payne. Information about what we put in our bodies is essential and should be unobstructed by advertisements &amp; corporate interests." alt="istherecaffeineinit.com"></a>
-  				</li>
-  				<li>
-  					<a href="http://h8cloud.com"><img src="images/h8cloud.png" title="H8Cloud: Just as all life consumes nourishment and extrudes waste, so does the internet." alt="h8cloud.com"></a>
-  				</li>
-  				<li>
-  					<a href="http://calcucat.com"><img src="images/calcucat.png" title="Calcucat: Calculate large numbers with help from the world's cutest beast. This is Art." alt="calcucat.com"></a>
-  				</li>
-  			</ul>
-    	</dd>
-    	<dt class="hidden">She is</dt>
-    	<dd class="other">
-  			<ul>
-  				<li>
-  					<a href="http://tumblr.juliawe.st"><img src="images/tumblr.png" title="tumblr" alt="tumblog"></a>
-  				</li>
-  				<li>
-  					<a href="http://twitter.com/juliamae"><img src="images/twitter.png" title="twitter" alt="twitter"></a>
-  				</li>
-  				<li>
-  					<a href="http://last.fm/user/juliamae"><img src="images/lastfm.png" title="last.fm" alt="last.fm"></a>
-  				</li>
-  				<li>
-  					<a href="http://github.com/juliamae"><img src="images/github.png" title="github" alt="github"></a>
-  				</li>
-  			</ul>
-    	</dd>
-    </dl>
+    <img src="images/wave.gif" alt="under construction" id="bg" />
+		<div id="content">
+		  <h1>
+  			julia mae west<br>
+  			is a web developer who lives in new york city
+  		</h1>
+  		<ul>
+  		  <li class="the-light">
+  		    <a href="http://github.com/juliamae" 
+  		       title="github:juliamae"
+  		       style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
+  		       data-preview="github">
+  		       &#x273E;
+  		    </a>  
+  		    <a href="http://tumblr.juliawe.st" 
+  		       title="tumblr:greatbeing"
+   		       style="color:#FF9E3D; text-shadow: 2px 2px #FF7A7A"
+   		       data-preview="tumblr">
+  		       &#x274D;
+  		    </a> 
+  		    <a href="http://twitter.com/juliamae" 
+  		       title="twitter:juliamae"
+   		       style="color:#FFFF3D; text-shadow: 2px 2px #FF9E3D"
+   		       data-preview="twitter">
+  		       &#x221E;
+  		    </a> 
+  		    <a href="http://last.fm/user/juliamae" 
+  		       title="last.fm:juliamae"
+   		       style="color:#80FF00; text-shadow: 2px 2px #00FFFF"
+   		       data-preview="lastfm">
+  		       &#x2743;
+  		    </a>
+  		    <a href="http://www.flickr.com/photos/juliamae/" 
+  		       title="flickr:juliamae"
+   		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
+    		     data-preview="pikachu">
+  		       &#x270C;
+  		    </a>
+  		    <a href="http://foursquare.com/juliamae" 
+  		       title="foursquare:juliamae"
+   		       style="color:#8C00FF; text-shadow: 2px 2px #C37AFF"
+    		     data-preview="pikachu">
+  		       &#x2638;
+  		    </a>
+  		  </li>
+  		</ul>
+  		
+      <div id="preview">
+        <img id="tumblr" src="images/tumblr.png">
+        <img id="github" src="images/github.png">
+        <img id="lastfm" src="images/lastfm.png">
+        <img id="twitter" src="images/twitter.png">
+        <img id="pikachu" src="images/pikatruction.gif">
+      </div>
+		</div>
+	     
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
