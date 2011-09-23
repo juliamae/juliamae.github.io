@@ -1,154 +1,108 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>
-			juliawe.st
-		</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
-    
-		<style type="text/css" media="screen">
-			* {
-				font-family : Helvetica, sans-serif;
-				text-align  : center;
-				text-shadow : 3px 3px #ccc;
-				
-			}
-			
-			html, body {
-  			height  : 100%;
-  			margin  : 0;
-  			padding : 0;
-  		}
-
-			h1 {
-				font-size   : 48px;
-				padding-top : 20px;
-			}
-			
-			ul, li {
-			  display : block;
-			}
-			
-			li.the-light {
-			  margin         : 10px auto 0;
-			  font-size      : 30px;
-			  text-align     : center;
-			  padding-bottom : 30px;
-			  text-shadow   : none;
-			}
-			
-			a {
-			  text-decoration : none;
-			  text-shadow : 3px 3px #000;
-			}
-			
-			a:hover {
-			  text-decoration : underline;
-			}
-      
-  		img#bg {
-  			position : fixed;
-  			top      : 0;
-  			left     : 0;
-  			width    : 100%;
-  			height   : 100%;
-  		}
-
-  		#content {
-  			position : relative;
-  			z-index  : 1;
-  		}
-  		
-  		#preview {
-  		  width: 205px;
-  		  margin: 0 auto;
-  		  position: relative;
-  		  text-align: center;
-  		}
-  		
-  		#preview img {
-  		  display: none;
-  		}
-
-		</style>
-  	
-  	<script type="text/javascript" charset="utf-8">
-  	  $(function(){
-  	    $(".the-light a").hover(function(){
-  	      $("#preview img#" + $(this).data("preview")).show();
-  	    }, function(){
-  	      $("#preview img").hide()
-  	    });
-  	  });
-  	</script>
-	</head>
-	<body>
-    <img src="images/wave.gif" alt="under construction" id="bg" />
-		<div id="content">
-		  <h1>
-  			julia mae west<br>
-  			is a web developer who lives in new york city
-  		</h1>
-  		<ul>
-  		  <li class="the-light">
-  		    <a href="http://github.com/juliamae" 
-  		       title="github:juliamae"
-  		       style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
-  		       data-preview="github">
-  		       &#x273E;
-  		    </a>  
-  		    <a href="http://tumblr.juliawe.st" 
-  		       title="tumblr:greatbeing"
-   		       style="color:#FF9E3D; text-shadow: 2px 2px #FF7A7A"
-   		       data-preview="tumblr">
-  		       &#x274D;
-  		    </a> 
-  		    <a href="http://twitter.com/juliamae" 
-  		       title="twitter:juliamae"
-   		       style="color:#FFFF3D; text-shadow: 2px 2px #FF9E3D"
-   		       data-preview="twitter">
-  		       &#x221E;
-  		    </a> 
-  		    <a href="http://last.fm/user/juliamae" 
-  		       title="last.fm:juliamae"
-   		       style="color:#80FF00; text-shadow: 2px 2px #00FFFF"
-   		       data-preview="lastfm">
-  		       &#x2743;
-  		    </a>
-  		    <a href="http://www.flickr.com/photos/juliamae/" 
-  		       title="flickr:juliamae"
-   		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
-    		     data-preview="pikachu">
-  		       &#x270C;
-  		    </a>
-  		    <a href="http://foursquare.com/juliamae" 
-  		       title="foursquare:juliamae"
-   		       style="color:#8C00FF; text-shadow: 2px 2px #C37AFF"
-    		     data-preview="pikachu">
-  		       &#x2638;
-  		    </a>
-  		  </li>
-  		</ul>
-  		
-      <div id="preview">
-        <img id="tumblr" src="images/tumblr.png">
-        <img id="github" src="images/github.png">
-        <img id="lastfm" src="images/lastfm.png">
-        <img id="twitter" src="images/twitter.png">
-        <img id="pikachu" src="images/pikatruction.gif">
+<head>
+	<title>Person: Julia West</title>	
+	
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css">
+	<style type="text/css" media="screen">
+	  * {
+	    font-family : Lucida Grande, Helvetica, sans-serif;
+	    font-size: 0px;
+	  }
+	  
+	  strong {
+	    font-weight : bold;
+	  }
+	  
+	  ::selection {
+      color: rgb(39,75,241);
+      background-color: rgb(236,243,255);
+	  }
+	  
+	  #address-book {
+	    margin     : 100px auto 0;
+	    padding    : 45px 75px;
+	    width      : 600px;
+	    height     : 320px;
+	    background : transparent url('addressbook.png') no-repeat scroll top left;
+	  }
+	  
+	  div.page {
+      float: left;
+      padding: 39px 18px;
+      width: 256px;
+      height: 232px;
+	  }
+	  
+	  input {
+      font-size: 11px;
+      padding: 1px 5px;
+      margin: 1px 17px;
+      width: 223px;
+      border: 0;
+      outline-style: none;
+	  }
+	  
+	  ul#results {
+	    margin : 9px 0;
+	  }
+	  
+	  ul#results li{
+      font-size: 12px;
+      height: 15px;
+      padding: 5px 6px;
+      margin-bottom : 1px;
+      color: rgb(39,75,241);
+      background-color: rgb(236,243,255);
+	  }
+	  
+	  #page.right dl *{
+	    font-size: 12px;
+	  }
+	</style>
+</head>
+<body>
+  
+  <div id="wrapper">
+    <div id="address-book">
+      <div id="left" class="page">
+        <input name="query" type="text" value="Julia West" autocomplete="off">
+        <ul id="results">
+          <li>Julia <strong>West</strong></li>
+        </ul>
       </div>
-		</div>
-	     
-		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		<script type="text/javascript">
-			var pageTracker = _gat._getTracker("UA-76376-5");
-			pageTracker._initData();
-			pageTracker._trackPageview();
-		</script>
-	</body>
+      <div id="right" class="page">
+        <div id="title">
+          <img id="avatar" title="Julia West" alt="Julia West">
+          <h1>Julia West</h1>
+        </div>
+        <dl>
+          <dt>email</dt>
+          <dd>juliamae@gmail.com</dd>
+          
+          <dt>homepage</dt>
+          <dd><a>juliawe.st</a></dd>
+          <dt>twitter</dt>
+          <dd><a>twitter.com/juliamae</a></dd>
+          <dt>github</dt>
+          <dd><a>github.com/juliamae</a></dd>
+          <dt>tumblr</dt>
+          <dd><a>greatbeing.tumblr.com</a></dd>
+          <dt>last.fm</dt>
+          <dd><a>last.fm/user/juliamae</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-76376-5");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	</script>
+</body>
 </html>
