@@ -6,8 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css">
 	<style type="text/css" media="screen">
 	  * {
-	    font-family : Lucida Grande, Helvetica, sans-serif;
-	    font-size: 0px;
+	    font-family : Helvetica, sans-serif;
+	    font-size   : 0px;
+	    line-height : 0px;
 	  }
 	  
 	  strong {
@@ -15,49 +16,92 @@
 	  }
 	  
 	  ::selection {
-      color: rgb(39,75,241);
-      background-color: rgb(236,243,255);
+      color            : rgb(39,75,241);
+      background-color : rgb(236,243,255);
 	  }
 	  
 	  #address-book {
 	    margin     : 100px auto 0;
 	    padding    : 45px 75px;
 	    width      : 600px;
-	    height     : 320px;
+	    height     : 340px;
 	    background : transparent url('addressbook.png') no-repeat scroll top left;
 	  }
 	  
+	  a,
+	  a:visited {
+	    color : rgb(62, 0, 255);
+	  }
+	  
 	  div.page {
-      float: left;
-      padding: 39px 18px;
-      width: 256px;
-      height: 232px;
+      float   : left;
+      padding : 39px 18px;
+      width   : 256px;
+      height  : 232px;
 	  }
 	  
-	  input {
-      font-size: 11px;
-      padding: 1px 5px;
-      margin: 1px 17px;
-      width: 223px;
-      border: 0;
-      outline-style: none;
+	  div.page * {
+	    font-size   : 13px;
+	    line-height : 13px;
 	  }
 	  
-	  ul#results {
+	  div.page input {
+      font-size     : 11px;
+      line-height   : 13px;
+      padding       : 1px 5px;
+      margin        : 1px 17px;
+      height        : 13px;
+      width         : 223px;
+      border        : 0;
+      outline-style : none;
+	  }
+	  
+	  div.page ul#results {
 	    margin : 9px 0;
 	  }
 	  
-	  ul#results li{
-      font-size: 12px;
-      height: 15px;
-      padding: 5px 6px;
-      margin-bottom : 1px;
-      color: rgb(39,75,241);
-      background-color: rgb(236,243,255);
+	  div.page ul#results li{
+      height           : 15px;
+      padding          : 5px 6px;
+      margin-bottom    : 1px;
+      color            : rgb(39,75,241);
+      background-color : rgb(236,243,255);
 	  }
 	  
-	  #page.right dl *{
-	    font-size: 12px;
+	  div.page dl * {
+	    line-height : 17px;
+	  }
+	  
+	  div.page dl div.avatar {
+	    width         : 48px;
+	    height        : 48px;
+	    float         : right;
+	    border        : 1px solid #777;
+	    border-radius : 5px;
+	    background    : transparent url('avatar_small.png') no-repeat scroll top left;
+	  }
+	  
+	  div.page dl dt {
+	    width      : 110px;
+	    clear      : left;
+	    float      : left;
+	    text-align : right ;
+	    color      : rgb(160,160,160);
+	  }
+	  
+	  div.page dl dt.section-break {
+	    line-height : 10px;
+	  }
+	  
+	  div.page dl dd {
+	    padding-left : 10px;
+	    float        : left;
+	  }
+	  
+	  div.page dl h1 {
+	    font-weight : bold;
+	    font-size   : 16px;
+	    line-height : 18px;
 	  }
 	</style>
 </head>
@@ -72,24 +116,29 @@
         </ul>
       </div>
       <div id="right" class="page">
-        <div id="title">
-          <img id="avatar" title="Julia West" alt="Julia West">
-          <h1>Julia West</h1>
-        </div>
         <dl>
+          <dt><div class="avatar">&nbsp;</div></dt>
+          <dd>
+            <h1>Julia West</h1>
+          </dd>
+          <dt class="section-break">&nbsp;</dt>
+            
           <dt>email</dt>
           <dd>juliamae@gmail.com</dd>
+          <dt class="section-break">&nbsp;</dt>
           
           <dt>homepage</dt>
-          <dd><a>juliawe.st</a></dd>
-          <dt>twitter</dt>
-          <dd><a>twitter.com/juliamae</a></dd>
+          <dd><a href="http://juliawe.st">juliawe.st</a></dd>
+          <dt class="section-break">&nbsp;</dt>
+          
           <dt>github</dt>
-          <dd><a>github.com/juliamae</a></dd>
+          <dd><a href="http://github.com/juliamae">github.com/juliamae</a></dd>
+          <dt>twitter</dt>
+          <dd><a href="http://twitter.com/juliamae">twitter.com/juliamae</a></dd>
           <dt>tumblr</dt>
-          <dd><a>greatbeing.tumblr.com</a></dd>
+          <dd><a href="http://greatbeing.tumblr.com">greatbeing.tumblr.com</a></dd>
           <dt>last.fm</dt>
-          <dd><a>last.fm/user/juliamae</a></dd>
+          <dd><a href="http://last.fm/user/juliamae">last.fm/user/juliamae</a></dd>
         </dl>
       </div>
     </div>
