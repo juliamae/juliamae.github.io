@@ -27,6 +27,10 @@
 				padding-top : 20px;
 			}
 			
+			ul {
+			  padding-top : 15px;
+			}
+			
 			ul, li {
 			  display : block;
 			}
@@ -35,13 +39,21 @@
 			  margin         : 10px auto 0;
 			  font-size      : 30px;
 			  text-align     : center;
-			  padding-bottom : 30px;
 			  text-shadow   : none;
+			}
+			
+			li.the-light.mine {
+			  padding-bottom : 30px;
 			}
 			
 			a {
 			  text-decoration : none;
 			  text-shadow : 3px 3px #000;
+			}
+			
+			#mine a {
+			  text-shadow : none;
+			  color: #fff;
 			}
 			
 			a:hover {
@@ -117,17 +129,25 @@
    		       data-preview="lastfm">
   		       &#x2743;
   		    </a>
-  		    <a href="http://www.flickr.com/photos/juliamae/" 
-  		       title="flickr:juliamae"
-   		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
-    		     data-preview="pikachu">
+  		  </li>
+  		  <li class="the-light mine">
+  		    <a href="http://h8cloud.com" 
+  		       title="h8cloud, often NSFW"
+  		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
+  		       data-preview="h8cloud">
+  		       &#x2638;
+  		    </a>
+  		    <a href="http://demo.shareabouts.org" 
+  		       title="shareabouts, via openplans"
+  		       style="color:#8C00FF; text-shadow: 2px 2px #C37AFF"
+  		       data-preview="pikachu">
   		       &#x270C;
   		    </a>
-  		    <a href="http://foursquare.com/juliamae" 
-  		       title="foursquare:juliamae"
-   		       style="color:#8C00FF; text-shadow: 2px 2px #C37AFF"
-    		     data-preview="pikachu">
-  		       &#x2638;
+  		    <a href="http://calcucat.com" 
+  		       title="calcucat, simply the best calculator, speakers on"
+  		       style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
+  		       data-preview="calcucat">
+  		       &#x2744;
   		    </a>
   		  </li>
   		</ul>
@@ -138,7 +158,10 @@
         <img id="lastfm" src="images/lastfm.png">
         <img id="twitter" src="images/twitter.png">
         <img id="pikachu" src="images/pikatruction.gif">
+        <img id="h8cloud" src="images/h8cloud.png">
+        <img id="calcucat" src="images/calcucat.png">
       </div>
+      
 		</div>
 	     
 		<script type="text/javascript">
