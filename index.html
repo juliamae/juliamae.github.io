@@ -7,15 +7,15 @@
 		</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css">
-    
+
 		<style type="text/css" media="screen">
 			* {
 				font-family : Helvetica, sans-serif;
 				text-align  : center;
 				text-shadow : 3px 3px #fff;
-				
+
 			}
-			
+
 			html, body {
   			height  : 100%;
   			margin  : 0;
@@ -26,40 +26,40 @@
 				font-size   : 48px;
 				padding-top : 20px;
 			}
-			
+
 			ul {
 			  padding-top : 15px;
 			}
-			
+
 			ul, li {
 			  display : block;
 			}
-			
+
 			li.the-light {
 			  margin         : 10px auto 0;
 			  font-size      : 30px;
 			  text-align     : center;
 			  text-shadow   : none;
 			}
-			
+
 			li.the-light.mine {
 			  padding-bottom : 30px;
 			}
-			
+
 			a {
 			  text-decoration : none;
 			  text-shadow : 3px 3px #000;
 			}
-			
+
 			#mine a {
 			  text-shadow : none;
 			  color: #fff;
 			}
-			
+
 			a:hover {
 			  text-decoration : underline;
 			}
-      
+
   		img#bg {
   			position : fixed;
   			top      : 0;
@@ -72,20 +72,20 @@
   			position : relative;
   			z-index  : 1;
   		}
-  		
+
   		#preview {
   		  width: 205px;
   		  margin: 0 auto;
   		  position: relative;
   		  text-align: center;
   		}
-  		
+
   		#preview img {
   		  display: none;
   		}
 
 		</style>
-  	
+
   	<script type="text/javascript" charset="utf-8">
   	  $(function(){
   	    $(".the-light a").hover(function(){
@@ -105,25 +105,31 @@
   		</h1>
   		<ul>
   		  <li class="the-light">
-  		    <a href="http://github.com/juliamae" 
+  		    <a href="http://github.com/juliamae"
   		       title="github:juliamae"
   		       style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
   		       data-preview="github">
   		       &#x273E;
-  		    </a>  
-  		    <a href="http://tumblr.juliawe.st" 
+  		    </a>
+          <a href="http://instagram.com/juliamae_"
+  		       title="instagram:juliamae_"
+  		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
+  		       data-preview="instagram">
+  		       &#x2638;
+  		    </a>
+  		    <a href="http://tumblr.juliawe.st"
   		       title="tumblr:greatbeing"
    		       style="color:#FF9E3D; text-shadow: 2px 2px #FF7A7A"
    		       data-preview="tumblr">
   		       &#x274D;
-  		    </a> 
-  		    <a href="http://twitter.com/juliamae" 
+  		    </a>
+  		    <a href="http://twitter.com/juliamae"
   		       title="twitter:juliamae"
    		       style="color:#FFFF3D; text-shadow: 2px 2px #FF9E3D"
    		       data-preview="twitter">
   		       &#x221E;
-  		    </a> 
-  		    <a href="http://last.fm/user/juliamae" 
+  		    </a>
+  		    <a href="http://last.fm/user/juliamae"
   		       title="last.fm:juliamae"
    		       style="color:#80FF00; text-shadow: 2px 2px #00FFFF"
    		       data-preview="lastfm">
@@ -131,39 +137,34 @@
   		    </a>
   		  </li>
   		  <li class="the-light mine">
-  		    <a href="http://h8cloud.com" 
-  		       title="h8cloud, often NSFW"
-  		       style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
-  		       data-preview="h8cloud">
-  		       &#x2638;
-  		    </a>
-  		    <a href="http://demo.shareabouts.org" 
-  		       title="shareabouts, via openplans"
-  		       style="color:#8C00FF; text-shadow: 2px 2px #C37AFF"
-  		       data-preview="pikachu">
-  		       &#x270C;
-  		    </a>
-  		    <a href="http://calcucat.com" 
-  		       title="calcucat, simply the best calculator, speakers on"
-  		       style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
-  		       data-preview="calcucat">
-  		       &#x2744;
-  		    </a>
+          <!-- <a href="http://h8cloud.com"
+             title="h8cloud, often NSFW"
+             style="color:#0080FF; text-shadow: 2px 2px #00FFFF"
+             data-preview="h8cloud">
+             &#x2638;
+          </a>
+          <a href="http://calcucat.com"
+             title="calcucat, simply the best calculator, speakers on"
+             style="color:#FF0080; text-shadow: 2px 2px #FF7A7A"
+             data-preview="calcucat">
+             &#x2744;
+          </a> -->
   		  </li>
   		</ul>
-  		
+
       <div id="preview">
         <img id="tumblr" src="images/tumblr.png">
         <img id="github" src="images/github.png">
+        <img id="instagram" src="images/instagram.png">
         <img id="lastfm" src="images/lastfm.png">
         <img id="twitter" src="images/twitter.png">
         <img id="pikachu" src="images/pikatruction.gif">
         <img id="h8cloud" src="images/h8cloud.png">
         <img id="calcucat" src="images/calcucat.png">
       </div>
-      
+
 		</div>
-	     
+
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
